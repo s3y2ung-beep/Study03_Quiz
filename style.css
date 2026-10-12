@@ -1,0 +1,106 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Pretendard", "Malgun Gothic", system-ui, sans-serif;
+  background: #f4f6fa;
+  color: #1f2430;
+  line-height: 1.5;
+}
+
+.student-id {
+  background: #1f3a8a;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  padding: 10px 16px;
+  font-size: 1.05rem;
+}
+
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+h1 { text-align: center; margin: 12px 0 20px; }
+
+.lead { font-size: 1.1rem; font-weight: 600; }
+
+button {
+  font: inherit;
+  padding: 12px 16px;
+  border: 1px solid #1f3a8a;
+  background: #1f3a8a;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:disabled { cursor: default; }
+button.secondary { background: #fff; color: #1f3a8a; }
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.mode-list { display: grid; gap: 12px; margin-bottom: 16px; }
+.mode-btn {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: #fff;
+  color: #1f2430;
+  border-color: #c7cfe0;
+}
+.mode-btn span { font-size: 0.9rem; color: #4a5368; }
+
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.timer { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+.timer.danger { color: #d32f2f; }
+
+.question { font-size: 1.2rem; overflow-wrap: anywhere; }
+
+.choices { display: grid; gap: 10px; margin-bottom: 12px; }
+.choice {
+  text-align: left;
+  background: #fff;
+  color: #1f2430;
+  border-color: #c7cfe0;
+  overflow-wrap: anywhere;
+}
+.choice.correct { background: #2e7d32; border-color: #2e7d32; color: #fff; }
+.choice.wrong { background: #d32f2f; border-color: #d32f2f; color: #fff; }
+.choice.removed { opacity: 0.35; text-decoration: line-through; }
+
+#btn-hint { margin-bottom: 12px; }
+
+.feedback {
+  background: #fff;
+  border: 1px solid #c7cfe0;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  overflow-wrap: anywhere;
+}
+.feedback p { margin: 0 0 6px; }
+
+.score { font-size: 1.4rem; font-weight: 700; }
+.note { color: #4a5368; }
+
+.result-list { padding-left: 20px; }
+.result-list li { margin-bottom: 6px; overflow-wrap: anywhere; }
+.result-list .ok { color: #2e7d32; font-weight: 600; }
+.result-list .ng { color: #d32f2f; font-weight: 600; }
+
+.button-row { display: flex; flex-wrap: wrap; gap: 10px; }

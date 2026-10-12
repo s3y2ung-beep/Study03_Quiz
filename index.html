@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>상식 퀴즈</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❓</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="student-id" id="student-id">학번 2601938 이름 박소영</div>
+  <main class="app">
+    <h1>상식 퀴즈</h1>
+
+    <!-- 시작 화면 -->
+    <section id="screen-start" class="screen">
+      <p class="lead">카테고리를 고르세요.</p>
+      <div id="category-list" class="button-grid"></div>
+    </section>
+
+    <!-- 모드 선택 화면 -->
+    <section id="screen-mode" class="screen" hidden>
+      <p class="lead" id="mode-title"></p>
+      <div class="mode-list">
+        <button class="mode-btn" data-mode="practice">
+          <strong>연습</strong>
+          <span>시간 제한과 힌트 없음, 맞히면 1점 · 순위표에 기록되지 않음</span>
+        </button>
+        <button class="mode-btn" data-mode="speed">
+          <strong>스피드</strong>
+          <span>문항마다 15초, 시간이 지나면 오답 · 맞히면 1점</span>
+        </button>
+        <button class="mode-btn" data-mode="hint">
+          <strong>힌트</strong>
+          <span>문항마다 힌트 1번(오답 2개 지우기) · 힌트를 쓰고 맞히면 0.5점</span>
+        </button>
+      </div>
+      <button id="btn-back" class="secondary">뒤로</button>
+    </section>
+
+    <!-- 문항 화면 -->
+    <section id="screen-quiz" class="screen" hidden>
+      <div class="status-bar">
+        <span id="quiz-label"></span>
+        <span id="quiz-progress"></span>
+        <span id="quiz-score"></span>
+      </div>
+      <div id="timer" class="timer" hidden></div>
+      <h2 id="question-text" class="question"></h2>
+      <div id="choice-list" class="choices"></div>
+      <button id="btn-hint" class="secondary" hidden>힌트 (오답 2개 지우기)</button>
+      <div id="feedback" class="feedback" hidden>
+        <p id="feedback-result"></p>
+        <p id="feedback-explanation"></p>
+        <a id="feedback-source" target="_blank" rel="noopener noreferrer"></a>
+      </div>
+      <button id="btn-next" hidden>다음</button>
+    </section>
+
+    <!-- 결과 화면 -->
+    <section id="screen-result" class="screen" hidden>
+      <h2 id="result-title"></h2>
+      <p id="result-score" class="score"></p>
+      <p id="result-note" class="note"></p>
+      <ol id="result-list" class="result-list"></ol>
+      <div class="button-row">
+        <button id="btn-retry-wrong" hidden>틀린 문제 다시 풀기</button>
+        <button id="btn-again">같은 모드 다시</button>
+        <button id="btn-home" class="secondary">처음으로</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
